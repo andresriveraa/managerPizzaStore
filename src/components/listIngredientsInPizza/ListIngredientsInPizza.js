@@ -44,6 +44,12 @@ const ListIngredientsInPizza = ({
             ingredients.reduce((accumulator, {price}) => accumulator + price, 0)
           }
         </Button>
+        <h2>Nombre Pizza</h2>
+        <p>
+          {
+            namePizza.sort().reduce((accummulator, actualVAlor) => accummulator + actualVAlor)
+          }
+        </p>
       </div>
     </Wrapp>
   )

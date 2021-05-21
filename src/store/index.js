@@ -3,7 +3,7 @@ import ingredientsInPizza from './ingredientsInPizza'
 import pizza from './pizza'
 import salesDay from './salesPerDay'
 import salesMonth from './salesPerMonth'
-import user from "./user";
+import usersInfo from "./user";
 import { createStore } from 'redux';
 import globalReducer from '../reducers'
 
@@ -13,7 +13,7 @@ export const initialState = {
   pizza,
   salesDay,
   salesMonth,
-  user
+  usersInfo
 }
 
 const store = createStore(globalReducer, initialState) 

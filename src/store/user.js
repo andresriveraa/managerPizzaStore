@@ -7,6 +7,9 @@ const usersInfo = [
     nombrePizza: '',
     precio: 22,
     fecha: ''
-  }},
+  }
+},
   
 ]
+
+export default usersInfo

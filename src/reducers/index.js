@@ -12,12 +12,14 @@ const globalReducer = (state = initialState, action) => {
           action.ingredient
         ]        
       }
+      
     case types.DELETE_INGREDIENT_PIZZA:
       return {
         ...state,
         ingredientsInPizza: state.ingredientsInPizza.filter(({id}) => id !== action.ingredientId)
       }
       break;
+
     case types.SET_NAME_PIZZA:
       return {
         ...state,
@@ -30,6 +32,7 @@ const globalReducer = (state = initialState, action) => {
         }
     }
       break;
+
     case types.DELETE_INGREDIENT_NAME:
       return {
         ...state,
@@ -62,8 +65,8 @@ const globalReducer = (state = initialState, action) => {
     case types.SET_INFO_USER:
       return{
         ...state,
-        user: [
-          ...state.user,
+        usersInfo: [
+          ...state.usersInfo,
           action.info,
         ],
       }
