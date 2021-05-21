@@ -1,14 +1,29 @@
 import './App.css';
-import GetAllIngredients from "../containers/Ingredients";
-import IngredientsInPizza from '../containers/IngredientsInPizza';
+import {
+  GetAllIngredients,
+  IngredientsInPizza,
+  ConfirmPizza
+} from "../containers/";
+import GlobalStyle from '../GlobalStyles'
+import { connect } from 'react-redux';
 
-const App = () => {
+const App = ({modal}) => {
   return (
     <div className="App">
+      <GlobalStyle/>
       <GetAllIngredients />
       <IngredientsInPizza />
+      {
+        modal && (
+          <ConfirmPizza />
+        )
+      }
     </div>
   );
 }
 
-export default App
+const mapStateToProps = state => ({
+  modal: state.pizza.modal
+})
+
+export default connect(mapStateToProps, null)(App) 

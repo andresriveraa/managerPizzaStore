@@ -1,6 +1,9 @@
 import { connect } from 'react-redux'
 import { ListIngredients } from "../components";
-import { setIngredientsPizza } from "../actions";
+import {
+   setIngredientsPizza,
+   setNamePizza
+} from "../actions";
 
 const mapStateToProps = state => ({
    ingredients: state.allIngredients,
@@ -8,7 +11,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-   onIngredientClick: (name) => dispatch(setIngredientsPizza(name))
+   onIngredientClick: name => dispatch(setIngredientsPizza(name)),
+   createNamePizza: syllable => dispatch(setNamePizza(syllable)),
 })
 
 const getAllIngredients = connect(mapStateToProps, mapDispatchToProps)(ListIngredients)

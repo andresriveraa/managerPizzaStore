@@ -1,9 +1,3 @@
-const ingredientsInPizza = [
-  {
-    id: 13,
-    name: 'masa',
-    price: 1000
-  }
-]
+const ingredientsInPizza = []
 
 export default ingredientsInPizza
