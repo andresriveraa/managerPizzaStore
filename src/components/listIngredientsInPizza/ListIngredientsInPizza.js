@@ -1,6 +1,8 @@
 import { PayCircleFilled } from '@ant-design/icons';
-import { Button } from 'antd';
+import React from 'react'
 import Wrapp from './styles'
+import { Button } from 'antd'
+import Title from 'antd/lib/typography/Title';
 
 const ListIngredientsInPizza = ({
   ingredients,
@@ -25,13 +27,13 @@ const ListIngredientsInPizza = ({
 
   return (
     <Wrapp>
-      <p className="titlePizza">Ingredients in pizza</p>
+      <Title level={2} style={{marginTop: 50, textAlign: 'center'}}>Ingredients in pizza</Title>
       <div className="gridingredientPizza">
         {
           ingredients.map(ingredient => {
             return <div key={ingredient.id}>
               <p>{ingredient.name}</p>
-              <button onClick={() => deleteItem(ingredient)}>Delet</button>
+              <Button danger onClick={() => deleteItem(ingredient)}>Delet</Button>
             </div>
           })
         }

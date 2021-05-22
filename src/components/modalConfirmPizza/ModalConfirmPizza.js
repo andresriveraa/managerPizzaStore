@@ -1,8 +1,9 @@
-import { Button } from 'antd';
-import {useState} from 'react'
+import React, {useState} from 'react'
 import Wrapp, {
   Modal
 } from './styles'
+import { Form, Input, Button, Checkbox} from 'antd';
+
 
 export default function ModalConfirmPizza ({
   price,
@@ -41,34 +42,39 @@ export default function ModalConfirmPizza ({
   return (
     <Wrapp>
       <Modal>
-        <p>
-          Confimación de pizza
-        </p>
-        <label>
-          <input 
+        <Form>
+          <p>
+            Confimación de pizza
+          </p>
+          <Form.Item>
+            <Input 
+              type="text"
+              placeholder="Nombre"
+              onChange={handleChange}
+              name="name"
+            />
+          </Form.Item>
+          <label>
+            <Input
             type="text"
-            placeholder="Nombre"
+            placeholder="Teléfono"
             onChange={handleChange}
-            name="name"
-          />
-        </label>
-        <label>
-          <input
-          type="text"
-          placeholder="Teléfono"
-          onChange={handleChange}
-          name="number"
-          />
-        </label>
-        <div className="date">
+            name="number"
+            />
+          </label>
+          <div className="date">
 
-        </div>
-        {
-        `${day.getDate()}/${day.getMonth()}/${day.getFullYear()}`
-        }
-        <p>total pizza: ${price}</p>
-        <Button onClick={handleSubmit}>Confirmar</Button>
-        <Button onClick={() => closeModal(false)}>cerrar modal</Button>
+          </div>
+          {
+          `${day.getDate()}/${day.getMonth()}/${day.getFullYear()}`
+          }
+          <p>total pizza: ${price}</p>
+          <div className="buttons">
+            <Button type="primary" onClick={handleSubmit}>Confirmar</Button>
+            <Button onClick={() => closeModal(false)}>cerrar modal</Button>
+
+          </div>
+        </Form>
 
       </Modal>
     </Wrapp>

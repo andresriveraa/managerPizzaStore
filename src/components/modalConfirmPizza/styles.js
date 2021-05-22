@@ -24,6 +24,12 @@ export const Modal = styled.div`
   height: 400px;
   border-radius: 15px;
   color: white;
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   
 `;
 

@@ -16,10 +16,9 @@ const Wrapp = styled.div`
 .pay {
   h2 {
     margin-bottom: 16px;
-    color: white;
   }
   width: 300px;
-  background-color: tomato;
+  background-color: white;
   border-radius: 15px;
   padding: 16px;
   margin: 40px auto;

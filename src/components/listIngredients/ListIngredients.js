@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react'
+import { Button } from 'antd'
+import Title from 'antd/lib/typography/Title'
+import React, { useState, useEffect } from 'react'
 import Wrapp from './styles'
 
 export default function ListIngredients({
@@ -23,12 +25,12 @@ export default function ListIngredients({
 
   return (
     <Wrapp>
-      <h1>Ingredients</h1>
+      <Title level={1} style={{textAlign: 'center'}}>Ingredients</Title>
       <div className="grid">
         {ingredients.map( ing => {
           return <div key={ing.name}>
               <p >{ing.name}</p>
-              <button onClick={() => addIng(ing)}>add</button>
+              <Button type="primary" size="middle" onClick={() => addIng(ing)}>add</Button>
             </div>
         })}
       </div>
