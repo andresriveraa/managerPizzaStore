@@ -1,14 +1,14 @@
 import { connect } from "react-redux";
-import { Statiscit } from "../components";
+import { StatisticComp } from "../components";
 
 const mapStateToProps = state => ({
-
+  salesData: state.sales,
+  clients: state.usersInfo
 })
 
 const mapDispatchToProps = dispatch => ({
-
 })
 
-const Statistics = connect(mapStateToProps, mapDispatchToProps)(Statiscit)
+const Statistics = connect(mapStateToProps, null)(StatisticComp)
 
 export default Statistics

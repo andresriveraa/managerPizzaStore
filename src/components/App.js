@@ -4,10 +4,10 @@ import {
   GetAllIngredients,
   IngredientsInPizza,
   ConfirmPizza,
+  Statistic
 } from "../containers/";
 import {
   SiderLayout,
-  Statiscit
 } from ".";
 import { Layout } from "antd";
 import {
@@ -29,7 +29,7 @@ const App = ({modal}) => {
           <Header className="site-layout-background" style={{ padding: 0 }} />
           <Content style={{ margin: '0 16px' }}>
             <Switch>
-              <Route exact path="/" component>
+              <Route exact path="/">
                 <>
                   <GetAllIngredients />
                   <IngredientsInPizza />
@@ -41,7 +41,7 @@ const App = ({modal}) => {
                 </>
               </Route>
               <Route exact path="/statistic">
-                <Statiscit />
+                <Statistic />
               </Route>
             </Switch>
           </Content>

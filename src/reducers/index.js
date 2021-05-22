@@ -1,6 +1,5 @@
 import * as types from '../constants/ActionTypes';
 import { initialState } from '../store';
-import ingredientsInPizza from '../store/ingredientsInPizza';
 
 const globalReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -63,11 +62,15 @@ const globalReducer = (state = initialState, action) => {
 
       // terminar ser info
     case types.SET_INFO_USER:
-      return{
+      const find = state.usersInfo.find(user => user.id === action.info.id)
+      console.log(find, Boolean(find));
+      if (find) {
+        return state
+      } else return {
         ...state,
         usersInfo: [
           ...state.usersInfo,
-          action.info,
+          action.info
         ],
       }
 
@@ -78,6 +81,15 @@ const globalReducer = (state = initialState, action) => {
           ...state.pizza,
           modal: action.bool
         }
+      }
+
+    case types.ADD_SALE:
+      return {
+        ...state,
+        sales: [
+          ...state.sales,
+          action.sale
+        ]
       }
     default:
       return state

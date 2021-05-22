@@ -9,18 +9,23 @@ export default function ModalConfirmPizza ({
   price,
   pizzaName,
   closeModal,
-  setInfoData
+  setInfoData,
+  setSale
 }) {
   const day = new Date()
+  const idSale= Math.random()
+  const idUser= Math.random()
   const [formData, updateFormData] = useState({
+    id: idUser,
     name: '',
     number:'',
-    pizzasCompradas: {
-      pizzaName: pizzaName,
-      price: price,
-      date: `${day.getDate()}/${day.getMonth()}/${day.getFullYear()}`
-    }
   });
+
+  const sale = {
+    id: idSale,
+    pizzaName,
+    price
+  }
 
   const handleChange = (e) => {
     updateFormData({
@@ -33,6 +38,7 @@ export default function ModalConfirmPizza ({
     e.preventDefault()
     if (formData.name !== '' && formData.number !== '') {
       setInfoData(formData)
+      setSale(sale)
       closeModal(false)
     } else {
       alert('hace falta datos')

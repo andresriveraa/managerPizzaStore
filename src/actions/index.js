@@ -39,3 +39,8 @@ export const closeModal = bool => ({
   type: types.CLOSE_MODAL,
   bool
 })
+
+export const addSale = sale => ({
+  type: types.ADD_SALE,
+  sale
+})
