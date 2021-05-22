@@ -1,3 +1,11 @@
+# Dudas al momento de crear el proyecto 
+¿el nombre de la pizza es para en dado momento saber la preferencia de los usuarios por cierta combinación de ingredientes o es solo para que el usuario la identifique?
+
+me fui por el primer camino 
+Para solucionar esto cree un nombre con las tres primeras letras de los ingredientes que se añaden a la pizza, creando primero un array y ordenandolo alfabeticamente, pero antes de añadir una grupo de tres letras verificaba que no estuviera en el nombre
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
