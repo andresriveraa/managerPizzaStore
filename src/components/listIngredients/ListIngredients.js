@@ -1,6 +1,6 @@
 import { Button } from 'antd'
 import Title from 'antd/lib/typography/Title'
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Wrapp from './styles'
 
 export default function ListIngredients({

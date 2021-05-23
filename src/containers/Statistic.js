@@ -6,8 +6,8 @@ const mapStateToProps = state => ({
   clients: state.usersInfo
 })
 
-const mapDispatchToProps = dispatch => ({
-})
+// const mapDispatchToProps = dispatch => ({
+// })
 
 const Statistics = connect(mapStateToProps, null)(StatisticComp)
 

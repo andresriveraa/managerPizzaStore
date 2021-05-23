@@ -17,7 +17,6 @@ const globalReducer = (state = initialState, action) => {
         ...state,
         ingredientsInPizza: state.ingredientsInPizza.filter(({id}) => id !== action.ingredientId)
       }
-      break;
 
     case types.SET_NAME_PIZZA:
       return {
@@ -30,7 +29,6 @@ const globalReducer = (state = initialState, action) => {
           ]
         }
     }
-      break;
 
     case types.DELETE_INGREDIENT_NAME:
       return {
@@ -63,7 +61,6 @@ const globalReducer = (state = initialState, action) => {
       // terminar ser info
     case types.SET_INFO_USER:
       const find = state.usersInfo.find(user => user.id === action.info.id)
-      console.log(find, Boolean(find));
       if (find) {
         return state
       } else return {

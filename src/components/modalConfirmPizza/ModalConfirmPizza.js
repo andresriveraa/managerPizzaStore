@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Wrapp, {
   Modal
 } from './styles'
-import { Form, Input, Button, Checkbox} from 'antd';
+import { Form, Input, Button } from 'antd';
 
 
 export default function ModalConfirmPizza ({

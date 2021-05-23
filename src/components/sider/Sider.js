@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 import {
   DesktopOutlined,
   PieChartOutlined,
-  FileOutlined,
   TeamOutlined,
-  UserOutlined,
 } from '@ant-design/icons';
 import { Link } from "react-router-dom";
 import { Layout, Menu } from "antd";
-const { SubMenu } = Menu
 const { Sider } = Layout;
 
 

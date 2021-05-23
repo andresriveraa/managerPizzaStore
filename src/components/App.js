@@ -17,7 +17,7 @@ import {
 } from "react-router-dom"; 
 import GlobalStyle from '../GlobalStyles'
 import './App.css';
-const { Header, Content, Footer, Sider } = Layout
+const { Header, Content, Footer } = Layout
 
 const App = ({modal}) => {
   return (
@@ -45,7 +45,7 @@ const App = ({modal}) => {
               </Route>
             </Switch>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>Created by <a href="https://andresrivera.com.co" target="_blank">Andrésrivera.com.co</a></Footer>
+          <Footer style={{ textAlign: 'center' }}>Created by <a href="https://andresrivera.com.co" rel="noopener noreferrer" target="_blank">Andrésrivera.com.co</a></Footer>
         </Layout>
     </Layout>
     </Router>

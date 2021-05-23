@@ -1,4 +1,3 @@
-import { PayCircleFilled } from '@ant-design/icons';
 import React from 'react'
 import Wrapp from './styles'
 import { Button } from 'antd'
