@@ -22,9 +22,27 @@ type ArticleState = {
   articles: IArticle[]
 }
 
-// type ArticleAction = {
-//   type: string
-//   article: IArticle
-// }
+type PizzaAction = {
+  type: string
+  ingredient: IArticle
+}
+
+type infouser = {
+  id: number | string
+  name: string
+  number: string
+}
+
+interface actionGlobal {
+  ingredient: object
+  type: string
+  syllable: string
+  name: string
+  price: number
+  info: infouser
+  ingredientId: number
+  bool: boolean
+  sale: object
+}
 
 // type DispatchType = (args: ArticleAction) => ArticleAction
